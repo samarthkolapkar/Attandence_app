@@ -1,0 +1,41 @@
+MainWindow:
+        FirstWindow:
+        SecondWindow:
+
+<FirstWindow>:
+        name: "First"
+
+
+        FloatLayout:
+        
+            orientation: "horizontal"
+            size: root.width,root.height
+            
+            Label:
+                text: "First Screen"
+                Font_size: 30
+                
+            Button:
+                text: "Second Screen"
+                Font_size: 30
+                on_release: app.root.current= "Screen"
+
+
+
+
+
+<SecondWindow>:
+        name: "Second"
+
+
+        FloatLayout:
+            orientation: "horizontal"
+            size: root.width, root.height
+            Label:
+                text: "Second Screen"
+                Font_size: 30
+                
+            Button:
+                text: "First Screen"
+                Font_size: 30
+                on_release: app.root.current= "First"
